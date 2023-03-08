@@ -6,8 +6,8 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:App_Flight_Plan"
         mc:Ignorable="d"
-        Title="MainWindow" Height="550" Width="900" Cursor="">
-    
+        Title="MainWindow" Height="650" Width="1000" Cursor="">
+
     <Grid>
 
         <Grid.ColumnDefinitions>
@@ -20,34 +20,49 @@
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
 
-        
+
         <!-- Columna superior con menu y titulo -->
-        <Grid Grid.ColumnSpan="2" Grid.Row="0">
-            
+        <Grid  Grid.Row="0" Grid.Column="0">
+
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            
+
             <TextBlock Style="{StaticResource MaterialDesignHeadline6TextBlock}" Text="Flighgt Planner" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" />
 
         </Grid>
 
         <!-- Menu vertical para la aplicacion -->
-        <Grid Grid.Row="1" Grid.Column="0">
-            <Button
-              Width="auto"
-              Content="MID"
-              IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
-              Style="{StaticResource MaterialDesignRaisedSecondaryButton}"
-              ToolTip="Resource name: MaterialDesignRaisedSecondaryButton">
-            </Button>
+        <Grid Grid.Row="1" Grid.Column="0" Cursor="" VerticalAlignment="Center">
+            <StackPanel>
+
+                <Button
+                  Width="auto"
+                  Content="Hangar"
+                  materialDesign:ButtonAssist.CornerRadius="0"
+                  IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                  Style="{StaticResource MaterialDesignRaisedSecondaryButton}"
+                  ToolTip="Resource name: MaterialDesignRaisedSecondaryButton" Cursor="Hand">
+                </Button>
+
+                <Button
+                  Width="auto"
+                  Content="Plan de Vuelo"
+                  materialDesign:ButtonAssist.CornerRadius="0"
+                  IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                  Style="{StaticResource MaterialDesignRaisedSecondaryButton}"
+                  ToolTip="Resource name: MaterialDesignRaisedSecondaryButton">
+                </Button>
+
+            </StackPanel>
+
+
         </Grid>
 
-
         <!-- Columna de area de trabajo donde aparecen lso diferentes formulario -->
-        <Grid Grid.Row="1" Grid.Column="1" Background="#a1a1a1">
+        <Grid Grid.RowSpan="2" Grid.Column="1" Background="#cfd8dc">
 
         </Grid>
 
