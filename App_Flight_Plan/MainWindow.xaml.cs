@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using App_Flight_Plan.Paginas;
 
 namespace App_Flight_Plan
 {
@@ -23,6 +24,37 @@ namespace App_Flight_Plan
         public MainWindow()
         {
             InitializeComponent();
+            Myframe.NavigationService.Navigate(new Inicio());
+        }
+
+        private void Btn_Hangar_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Myframe.NavigationService.Navigate(new Hangar());
+
+            }
+            catch(Exception ex){ }
+        }
+
+        private void Btn_Inicio_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Myframe.NavigationService.Navigate(new Inicio());
+
+            }
+            catch(Exception ex) { }
+        }
+
+        private void Btn_Plan_Vuelo_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Myframe.NavigationService.Navigate(new PlanVuelo());
+
+            }
+            catch (Exception ex) { }
         }
     }
 }

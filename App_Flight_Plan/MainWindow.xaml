@@ -39,21 +39,33 @@
             <StackPanel>
 
                 <Button
+                  Name="Btn_Inicio"
+                  Width="auto"
+                  Content="Inicio"
+                  materialDesign:ButtonAssist.CornerRadius="0"
+                  IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                  Style="{StaticResource MaterialDesignRaisedSecondaryButton}"
+                  ToolTip="Resource name: MaterialDesignRaisedSecondaryButton" Cursor="Hand" Click="Btn_Inicio_Click">
+                </Button>
+                
+                <Button
+                  Name="Btn_Hnagar"
                   Width="auto"
                   Content="Hangar"
                   materialDesign:ButtonAssist.CornerRadius="0"
                   IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
                   Style="{StaticResource MaterialDesignRaisedSecondaryButton}"
-                  ToolTip="Resource name: MaterialDesignRaisedSecondaryButton" Cursor="Hand">
+                  ToolTip="Resource name: MaterialDesignRaisedSecondaryButton" Cursor="Hand" Click="Btn_Hangar_Click">
                 </Button>
 
                 <Button
+                  Name="Btn_PlanVuelo"
                   Width="auto"
                   Content="Plan de Vuelo"
                   materialDesign:ButtonAssist.CornerRadius="0"
                   IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
                   Style="{StaticResource MaterialDesignRaisedSecondaryButton}"
-                  ToolTip="Resource name: MaterialDesignRaisedSecondaryButton">
+                  ToolTip="Resource name: MaterialDesignRaisedSecondaryButton" Click="Btn_Plan_Vuelo_Click">
                 </Button>
 
             </StackPanel>
@@ -63,7 +75,7 @@
 
         <!-- Columna de area de trabajo donde aparecen lso diferentes formulario -->
         <Grid Grid.RowSpan="2" Grid.Column="1" Background="#cfd8dc">
-
+            <Frame x:Name="Myframe" NavigationUIVisibility="Hidden" />
         </Grid>
 
     </Grid>
