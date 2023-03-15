@@ -13,9 +13,10 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="170"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="280"></RowDefinition>
         </Grid.RowDefinitions>
 
+        <!-- Tarjeta o pnale de formulario para crear una nueva aeronave -->
         <materialDesign:Card   
             Grid.Row="0"
             Width="600"
@@ -54,6 +55,7 @@
                         Grid.Row="0"
                         MaxWidth="400"
                         VerticalAlignment="Top"
+                        FontSize="15"
                         materialDesign:HintAssist.Hint="Cod Modelo"
                         AcceptsReturn="True"
                         Style="{StaticResource MaterialDesignFilledTextBox}"
@@ -67,7 +69,7 @@
                         VerticalAlignment="Top"
                         materialDesign:HintAssist.Hint="Modelo"
                         AcceptsReturn="True"
-                        IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignFilledTextBoxEnabledComboBox}"
+                        FontSize="15"
                         Style="{StaticResource MaterialDesignFilledTextBox}"
                         TextWrapping="Wrap" />
 
@@ -79,7 +81,7 @@
                         VerticalAlignment="Top"
                         materialDesign:HintAssist.Hint="Velocidad"
                         AcceptsReturn="True"
-                        IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignFilledTextBoxEnabledComboBox}"
+                        FontSize="15"
                         Style="{StaticResource MaterialDesignFilledTextBox}"
                         TextWrapping="Wrap" />
 
@@ -91,7 +93,7 @@
                         VerticalAlignment="Top"
                         materialDesign:HintAssist.Hint="Consumo Conbustible"
                         AcceptsReturn="True"
-                        IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignFilledTextBoxEnabledComboBox}"
+                        FontSize="15"
                         Style="{StaticResource MaterialDesignFilledTextBox}"
                         TextWrapping="Wrap" />
 
@@ -100,7 +102,6 @@
                           Grid.Column="2"
                           Width="100"
                           Content="Crear"
-                          IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
                           ToolTip="Resource name: MaterialDesignRaisedButton" />
 
                 </Grid>
@@ -110,6 +111,39 @@
             </Grid>
 
         </materialDesign:Card>
+
+        <!-- Tarjeta para cargar aeronaves ya registradas -->
+        <materialDesign:Card   
+            Grid.Row="1"
+            Width="600"
+            Height="260"
+            Background="White"
+            Foreground="black"
+            UniformCornerRadius="6"
+            Padding="8" >
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <TextBlock Style="{StaticResource MaterialDesignHeadline6TextBlock}" 
+                           Text="Hangar" FontSize="18" Grid.Row="0"
+                           FontWeight="Bold" 
+                           HorizontalAlignment="Left" VerticalAlignment="Center"
+                            />
+
+                <DataGrid Grid.Row="1"  x:Name="HangarRegistrado" ItemsSource="{Binding}" AlternatingRowBackground="LightBlue" AlternationCount="2">
+                    
+                    
+                </DataGrid>
+
+
+            </Grid>
+            
+        </materialDesign:Card>
+
 
     </Grid>
 </Page>

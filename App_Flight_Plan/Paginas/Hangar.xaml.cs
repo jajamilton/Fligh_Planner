@@ -23,6 +23,46 @@ namespace App_Flight_Plan.Paginas
         public Hangar()
         {
             InitializeComponent();
+
+            HangarRegistrado.ItemsSource= CargarAronave();
+
         }
+
+
+
+        public class Aeronave
+        {
+            public string Nombre { get; set; }
+            public string Cod { get; set; }
+            public string velocidad { get; set; }
+        }
+
+
+
+        public List<Aeronave> CargarAronave()
+        {
+            List<Aeronave> hangar = new List<Aeronave>();
+            hangar.Add(new Aeronave()
+            {
+                Nombre = "CESSNA 208",
+                Cod = "c208",
+                velocidad="140"
+            }) ;
+
+            hangar.Add(new Aeronave()
+            {
+                Nombre = "Baron 58",
+                Cod = "BE58",
+                velocidad = "140"
+            });
+
+            return hangar;
+        }
+
     }
+
+
+  
+
+
 }
