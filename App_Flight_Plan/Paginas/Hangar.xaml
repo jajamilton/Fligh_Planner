@@ -134,8 +134,15 @@
                            HorizontalAlignment="Left" VerticalAlignment="Center"
                             />
 
-                <DataGrid Grid.Row="1"  x:Name="HangarRegistrado" ItemsSource="{Binding}" AlternatingRowBackground="LightBlue" AlternationCount="2">
-                    
+                <DataGrid Grid.Row="1" Width="540" x:Name="HangarRegistrado" ItemsSource="{Binding}" AlternatingRowBackground="LightBlue" AlternationCount="2"
+                   IsReadOnly="True" AutoGenerateColumns="False" >
+
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Avion" Width="*" Binding="{Binding Nombre}" ></DataGridTextColumn>
+                        <DataGridTextColumn Header="Modelo" Width="*" Binding="{Binding Cod}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Velocidad" Width="*" Binding="{Binding velocidad}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="Consumo Conbustible" Width="170" Binding="{Binding ConsumoCombustible}"></DataGridTextColumn>
+                    </DataGrid.Columns>
                     
                 </DataGrid>
 

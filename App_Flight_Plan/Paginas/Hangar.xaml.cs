@@ -35,6 +35,7 @@ namespace App_Flight_Plan.Paginas
             public string Nombre { get; set; }
             public string Cod { get; set; }
             public string velocidad { get; set; }
+            public string ConsumoCombustible { get; set; }
         }
 
 
@@ -46,14 +47,32 @@ namespace App_Flight_Plan.Paginas
             {
                 Nombre = "CESSNA 208",
                 Cod = "c208",
-                velocidad="140"
+                velocidad="140",
+                ConsumoCombustible="140"
             }) ;
 
             hangar.Add(new Aeronave()
             {
                 Nombre = "Baron 58",
                 Cod = "BE58",
-                velocidad = "140"
+                velocidad = "140",
+                ConsumoCombustible = "200"
+            });
+
+            hangar.Add(new Aeronave()
+            {
+                Nombre = "Boeng 727",
+                Cod = "B727",
+                velocidad = "330",
+                ConsumoCombustible = "35000"
+            });
+
+            hangar.Add(new Aeronave()
+            {
+                Nombre = "Douglas dc10",
+                Cod = "DC10",
+                velocidad = "330",
+                ConsumoCombustible = "20000"
             });
 
             return hangar;
