@@ -32,6 +32,7 @@ namespace App_Flight_Plan.Paginas
 
         public class Aeronave
         {
+            public string Id { get; set; }
             public string Nombre { get; set; }
             public string Cod { get; set; }
             public string velocidad { get; set; }
@@ -45,6 +46,7 @@ namespace App_Flight_Plan.Paginas
             List<Aeronave> hangar = new List<Aeronave>();
             hangar.Add(new Aeronave()
             {
+                Id="1",
                 Nombre = "CESSNA 208",
                 Cod = "c208",
                 velocidad="140",
@@ -53,6 +55,7 @@ namespace App_Flight_Plan.Paginas
 
             hangar.Add(new Aeronave()
             {
+                Id = "2",
                 Nombre = "Baron 58",
                 Cod = "BE58",
                 velocidad = "140",
@@ -61,6 +64,7 @@ namespace App_Flight_Plan.Paginas
 
             hangar.Add(new Aeronave()
             {
+                Id = "3",
                 Nombre = "Boeng 727",
                 Cod = "B727",
                 velocidad = "330",
@@ -69,6 +73,7 @@ namespace App_Flight_Plan.Paginas
 
             hangar.Add(new Aeronave()
             {
+                Id = "4",
                 Nombre = "Douglas dc10",
                 Cod = "DC10",
                 velocidad = "330",
@@ -78,6 +83,14 @@ namespace App_Flight_Plan.Paginas
             return hangar;
         }
 
+        private void Click_Tanques(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                ///Abrir ventana emergente para crear tanques
+                           
+            }catch(Exception) { }
+        }
     }
 
 
