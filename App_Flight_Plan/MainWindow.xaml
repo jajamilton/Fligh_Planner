@@ -6,9 +6,16 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:App_Flight_Plan"
         mc:Ignorable="d"
-        Title="MainWindow" Height="650" Width="1000" Cursor="">
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
+        Title="MainWindow" Icon="/Icono.ico" Height="650" Width="1000">
 
-    <Grid>
+    <Border CornerRadius="10"
+            BorderThickness="1">
+
+        <Border.BorderBrush>
+            <SolidColorBrush Color="AntiqueWhite"></SolidColorBrush>
+        </Border.BorderBrush>
+<Grid>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"></ColumnDefinition>
@@ -19,10 +26,10 @@
             <RowDefinition Height="40"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
-
+        
 
         <!-- Columna superior con menu y titulo -->
-        <Grid  Grid.Row="0" Grid.Column="0">
+        <Grid Grid.Row="0" Grid.Column="0" >
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"></ColumnDefinition>
@@ -79,5 +86,5 @@
         </Grid>
 
     </Grid>
-
+    </Border>
 </Window>

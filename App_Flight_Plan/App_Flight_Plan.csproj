@@ -8,7 +8,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="icono.ico" />
+    <None Remove="Paginas\icono.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MaterialDesignThemes" Version="4.8.1-ci186" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="icono.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Paginas\icono.ico" />
   </ItemGroup>
 
 </Project>

@@ -87,7 +87,8 @@ namespace App_Flight_Plan.Paginas
         {
             try
             {
-                ///Abrir ventana emergente para crear tanques
+                Tanques VentanaTanques = new Tanques();
+                VentanaTanques.ShowDialog();
                            
             }catch(Exception) { }
         }
