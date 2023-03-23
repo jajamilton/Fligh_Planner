@@ -23,5 +23,12 @@ namespace App_Flight_Plan.Paginas
         {
             InitializeComponent();
         }
+
+        private void CerrarVentanaTanques(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
+
+    
 }
