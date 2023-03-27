@@ -22,11 +22,37 @@ namespace App_Flight_Plan.Paginas
         public Tanques()
         {
             InitializeComponent();
+            TanquesAeronave.ItemsSource = cargarTanques();
         }
 
         private void CerrarVentanaTanques(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+
+        public List<Tanque> cargarTanques()
+        {
+            List<Tanque> tanques = new List<Tanque>();
+            tanques.Add(
+                new Tanque { CumbustibleTotal = "15658", PorcentajeTotal = "15" }
+            );
+            tanques.Add(
+                new Tanque { CumbustibleTotal = "15658", PorcentajeTotal = "15" }
+            );
+            tanques.Add(
+                new Tanque { CumbustibleTotal = "15658", PorcentajeTotal = "15" }
+            );
+
+            return tanques;
+        }
+
+
+
+        public class Tanque
+        {
+            public string CumbustibleTotal { get; set; }
+            public string PorcentajeTotal { get; set; }
         }
     }
 

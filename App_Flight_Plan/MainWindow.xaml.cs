@@ -51,7 +51,7 @@ namespace App_Flight_Plan
         {
             try
             {
-                Myframe.NavigationService.Navigate(new PlanVuelo());
+                Myframe.NavigationService.Navigate(new PlanDeVuelo());
 
             }
             catch (Exception ex) { }

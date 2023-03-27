@@ -47,7 +47,7 @@
             <Grid Grid.Row="1" Grid.ColumnSpan="2">
 
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="90"></RowDefinition>
                     <RowDefinition Height="*"></RowDefinition>
                 </Grid.RowDefinitions>
                 
@@ -63,6 +63,23 @@
                 </Button>
                     
                 </StackPanel>
+
+                <DataGrid x:Name="TanquesAeronave" Grid.Row="1" ItemsSource="{Binding}" AlternatingRowBackground="#bcbcbc" AlternationCount="2"
+                   IsReadOnly="True" AutoGenerateColumns="False" >
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Combituble total"  Binding="{Binding CumbustibleTotal}" ></DataGridTextColumn>
+                        <DataGridTextColumn Header="Porcetaje tanques" Binding="{Binding PorcentajeTotal}"></DataGridTextColumn>
+
+                        <DataGridTemplateColumn>
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Content="Eliminar" BorderBrush="#c82d33" Background="#c82d33" CommandParameter="{Binding Path='Id'}"  />
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+
+                </DataGrid>
 
             </Grid>
         

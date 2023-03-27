@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace App_Flight_Plan.Paginas
 {
     /// <summary>
-    /// Lógica de interacción para PlanVuelo.xaml
+    /// Lógica de interacción para PlanDeVuelo.xaml
     /// </summary>
-    public partial class PlanVuelo : Page
+    public partial class PlanDeVuelo : Page
     {
-        public PlanVuelo()
+        public PlanDeVuelo()
         {
             InitializeComponent();
         }
