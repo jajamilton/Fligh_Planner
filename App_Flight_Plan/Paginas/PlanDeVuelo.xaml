@@ -18,7 +18,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
-        
+
         <materialDesign:Card   
             Grid.Row="0"
             Grid.Column="0"
@@ -39,40 +39,198 @@
                            Text="Plan de Vuelo" FontSize="18" Grid.Row="0"
                            FontWeight="Bold" Grid.Column="0" 
                            HorizontalAlignment="Center" VerticalAlignment="Top" />
-                
+
                 <Grid Grid.Row="1">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"></ColumnDefinition>
-                        <ColumnDefinition Width="*"></ColumnDefinition>
-                        <ColumnDefinition Width="*"></ColumnDefinition>
-                        <ColumnDefinition Width="*"></ColumnDefinition>
-                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="146.8"></ColumnDefinition>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
 
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="*"></RowDefinition>
-                        <RowDefinition Height="*"></RowDefinition>
-                        <RowDefinition Height="*"></RowDefinition>
-                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition Height="123.5"></RowDefinition>
+                        <RowDefinition/>
                     </Grid.RowDefinitions>
 
                     <TextBox
-                        Width="190"
+                        Width="140"
                         Grid.Column="0"
                         Grid.Row="0"
                         MaxWidth="400"
                         VerticalAlignment="Top"
                         FontSize="15"
-                        materialDesign:HintAssist.Hint="Cod Modelo"
+                        materialDesign:HintAssist.Hint="Callsing"
                         AcceptsReturn="True"
                         Style="{StaticResource MaterialDesignFilledTextBox}"
                         TextWrapping="Wrap" />
+
+                    <TextBox
+                        Width="140"
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        MaxWidth="400"
+                        VerticalAlignment="Top"
+                        FontSize="15"
+                        materialDesign:HintAssist.Hint="Origen"
+                        AcceptsReturn="True"
+                        Style="{StaticResource MaterialDesignFilledTextBox}"
+                        TextWrapping="Wrap" />
+
+                    <TextBox
+                        Width="140"
+                        Grid.Column="2"
+                        Grid.Row="0"
+                        MaxWidth="400"
+                        VerticalAlignment="Top"
+                        FontSize="15"
+                        materialDesign:HintAssist.Hint="Destino"
+                        AcceptsReturn="True"
+                        Style="{StaticResource MaterialDesignFilledTextBox}"
+                        TextWrapping="Wrap" />
+
+                    <TextBox
+                        Width="140"
+                        Grid.Column="3"
+                        Grid.Row="0"
+                        MaxWidth="400"
+                        VerticalAlignment="Top"
+                        FontSize="15"
+                        materialDesign:HintAssist.Hint="Alterno"
+                        AcceptsReturn="True"
+                        Style="{StaticResource MaterialDesignFilledTextBox}"
+                        TextWrapping="Wrap" />
+
+                    <TextBox
+                        Width="140"
+                        Grid.Column="4"
+                        Grid.Row="0"
+                        MaxWidth="400"
+                        VerticalAlignment="Top"
+                        FontSize="15"
+                        materialDesign:HintAssist.Hint="Hora Salida"
+                        AcceptsReturn="True"
+                        Style="{StaticResource MaterialDesignFilledTextBox}"
+                        TextWrapping="Wrap" />
+
+                    <TextBox
+                        Width="140"
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        MaxWidth="400"
+                        VerticalAlignment="Top"
+                        FontSize="15"
+                        materialDesign:HintAssist.Hint="Distancia"
+                        AcceptsReturn="True"
+                        Style="{StaticResource MaterialDesignFilledTextBox}"
+                        TextWrapping="Wrap" />
+
+                    <ComboBox
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        VerticalAlignment="Center"
+                        Margin="0 0 0 18"
+                        FontSize="15"
+                        Width="140"
+                        materialDesign:HintAssist.Hint="Aeronave"
+                            >
+                        <ComboBoxItem
+                            Content="Android" />
+                        <ComboBoxItem
+                            Content="iOS" />
+                        <ComboBoxItem
+                            Content="Linux" />
+                        <ComboBoxItem
+                            Content="Windows" />
+                    </ComboBox>
+
+                    <TextBox
+                        Width="140"
+                        Grid.Column="2"
+                        Grid.Row="1"
+                        MaxWidth="400"
+                        VerticalAlignment="Top"
+                        FontSize="15"
+                        materialDesign:HintAssist.Hint="Tiempo Ruta"
+                        AcceptsReturn="True"
+                        Style="{StaticResource MaterialDesignFilledTextBox}"
+                        TextWrapping="Wrap" />
+
+                    <TextBox
+                        Width="140"
+                        Grid.Column="3"
+                        Grid.Row="1"
+                        MaxWidth="400"
+                        VerticalAlignment="Top"
+                        FontSize="15"
+                        materialDesign:HintAssist.Hint="Tiempo Total"
+                        AcceptsReturn="True"
+                        Style="{StaticResource MaterialDesignFilledTextBox}"
+                        TextWrapping="Wrap" />
+
+                    <TextBox
+                        Width="140"
+                        Grid.Column="4"
+                        Grid.Row="1"
+                        MaxWidth="400"
+                        VerticalAlignment="Top"
+                        FontSize="15"
+                        materialDesign:HintAssist.Hint="Nivel o altura"
+                        AcceptsReturn="True"
+                        Style="{StaticResource MaterialDesignFilledTextBox}"
+                        TextWrapping="Wrap" />
+
+                    <TextBox
+                        Width="140"
+                        Grid.Column="0"
+                        Grid.Row="2"
+                        MaxWidth="400"
+                        VerticalAlignment="Top"
+                        FontSize="15"
+                        materialDesign:HintAssist.Hint="Tiempo alterno"
+                        AcceptsReturn="True"
+                        Style="{StaticResource MaterialDesignFilledTextBox}"
+                        TextWrapping="Wrap" />
+
+
+                    <TextBox
+                          Grid.Row="2"
+                          Grid.Column="1"
+                          Grid.ColumnSpan="2"
+                          Height="40"
+                          MinWidth="140"
+                          Margin="0 0 0 58"
+                          materialDesign:HintAssist.Hint="Ruta"
+                          AcceptsReturn="True"
+                          SpellCheck.IsEnabled="True"
+                          Text=""
+                          TextWrapping="Wrap"
+                          VerticalScrollBarVisibility="Auto" />
+
+                    <TextBox
+                          Grid.Row="2"
+                          Grid.Column="3"
+                          Grid.ColumnSpan="2"
+                          Height="40"
+                          MinWidth="140"
+                          Margin="0 0 0 58"
+                          materialDesign:HintAssist.Hint="Combustible"
+                          AcceptsReturn="True"
+                          SpellCheck.IsEnabled="True"
+                          Text=""
+                          TextWrapping="Wrap"
+                          VerticalScrollBarVisibility="Auto" />
+
 
                 </Grid>
 
             </Grid>
 
         </materialDesign:Card>
-        
+
     </Grid>
 </Page>
