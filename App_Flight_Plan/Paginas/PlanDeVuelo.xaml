@@ -201,9 +201,8 @@
                           Grid.Row="2"
                           Grid.Column="1"
                           Grid.ColumnSpan="2"
-                          Height="40"
                           MinWidth="140"
-                          Margin="0 0 0 58"
+                          Margin="0 0 0 41"
                           materialDesign:HintAssist.Hint="Ruta"
                           AcceptsReturn="True"
                           SpellCheck.IsEnabled="True"
@@ -215,15 +214,73 @@
                           Grid.Row="2"
                           Grid.Column="3"
                           Grid.ColumnSpan="2"
-                          Height="40"
                           MinWidth="140"
-                          Margin="0 0 0 58"
+                          Margin="0 0 0 41"
                           materialDesign:HintAssist.Hint="Combustible"
                           AcceptsReturn="True"
                           SpellCheck.IsEnabled="True"
                           Text=""
                           TextWrapping="Wrap"
                           VerticalScrollBarVisibility="Auto" />
+
+                    <ComboBox
+                        Grid.Row="3"
+                        Grid.Column="0"
+                        VerticalAlignment="Center"
+                        Margin="0 0 0 18"
+                        FontSize="15"
+                        Width="140"
+                        materialDesign:HintAssist.Hint="Reglas Vuelo"
+                            >
+                        <ComboBoxItem
+                            Content="Android" />
+                        <ComboBoxItem
+                            Content="iOS" />
+                        <ComboBoxItem
+                            Content="Linux" />
+                        <ComboBoxItem
+                            Content="Windows" />
+                    </ComboBox>
+
+                    <ComboBox
+                        Grid.Row="3"
+                        Grid.Column="1"
+                        VerticalAlignment="Center"
+                        Margin="0 0 0 18"
+                        FontSize="15"
+                        Width="140"
+                        materialDesign:HintAssist.Hint="Equipamiento"
+                            >
+                        <ComboBoxItem
+                            Content="Android" />
+                        <ComboBoxItem
+                            Content="iOS" />
+                        <ComboBoxItem
+                            Content="Linux" />
+                        <ComboBoxItem
+                            Content="Windows" />
+                    </ComboBox>
+
+                    <TextBox
+                          Grid.Row="3"
+                          Grid.Column="2"
+                          Grid.ColumnSpan="2"
+                          Height="40"
+                          MinWidth="140"
+                          Margin="0 0 0 28"
+                          materialDesign:HintAssist.Hint="Remarks"
+                          AcceptsReturn="True"
+                          SpellCheck.IsEnabled="True"
+                          Text=""
+                          TextWrapping="Wrap"
+                          VerticalScrollBarVisibility="Auto" />
+
+                    <RepeatButton
+                          Grid.Row="4"
+                          Grid.Column="2"
+                          Width="auto"
+                          Content="Generar"
+                          ToolTip="Resource name: MaterialDesignRaisedButton" />
 
 
                 </Grid>
